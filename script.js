@@ -35,32 +35,8 @@ $(document).ready(function () {
         }
     });
 
-    description.each(function () {
-
-        for (let i = 0; i < localStorage.length; i++) {
-            console.log(localStorage.getItem(localStorage.key(i)));
-
-            let objectKey = localStorage.key(i);
-            let taskValue = localStorage.getItem(objectKey);
-
-            console.log(objectKey);
-            console.log(typeof objectKey);
-            console.log(taskValue);
-            console.log(typeof taskValue);
-
-            if (objectKey === rowHour) {
-                $(this).val(taskValue);
-            }
-
-        }
-    });
-
     function saveTasks() {
-        let currentTime = $(this).data("hour");
-        let task = $(this).siblings(".description").val();
-
-        console.log(currentTime);
-        console.log(rowHour);
+        let task = $(this).parent().siblings(".description").val();
         console.log(task);
 
         if (task === "") {
