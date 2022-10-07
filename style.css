@@ -2,10 +2,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-color: rgb(166, 196, 241);
 }
 
 .displayTime > .lead {
   font-size: 40px;
+  font-weight: bold;
 }
 
 textarea{
