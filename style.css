@@ -6,7 +6,7 @@ body {
 }
 
 .displayTime > .lead {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 
@@ -27,11 +27,15 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+.note {
+  font-size: 25px;
+}
+
 .description{
   white-space: pre-wrap;
 }
 
-.time-block{
+.input-group{
   text-align: center;
   border-radius: 15px;
 }
