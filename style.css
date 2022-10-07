@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+.displayTime > .lead {
+  font-size: 40px;
+}
+
 textarea{
   background: transparent;
   border: none;
