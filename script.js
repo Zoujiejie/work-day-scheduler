@@ -8,15 +8,18 @@ $("#currentTime").append(currentTime);
 let description = $(".description");
 let saveButton = $(".saveBtn");
 let currentHour = moment().hour();
-let rowHour = $(this).siblings(".hour").text();
 
 console.log(currentHour);
 
 $(document).ready(function () {
     console.log("ready!");
-    
     description.each(function () {
         let inputGroup = parseInt($(this).attr("id"));
+        let time = localStorage.getItem(inputGroup);
+
+        if (time) {
+            $(this).val(time)
+        }
 
         if (inputGroup === currentHour) {
             $(this).addClass("present");
@@ -36,8 +39,10 @@ $(document).ready(function () {
     });
 
     function saveTasks() {
+        let rowHour = $(this).parent().siblings(".description").attr("id");
         let task = $(this).parent().siblings(".description").val();
         console.log(task);
+        console.log(rowHour);
 
         if (task === "") {
             localStorage.setItem(rowHour, "");
